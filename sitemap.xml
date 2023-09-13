@@ -2,27 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.kalisec.org/link/index.html</loc>
+    <loc>https://www.kalisec.org/tags/index.html</loc>
     
-    <lastmod>2023-05-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.kalisec.org/posts/490e9480.html</loc>
-    
-    <lastmod>2023-05-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.kalisec.org/posts/f255ffad.html</loc>
-    
-    <lastmod>2023-05-29</lastmod>
+    <lastmod>2023-09-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,16 +13,7 @@
   <url>
     <loc>https://www.kalisec.org/categories/index.html</loc>
     
-    <lastmod>2023-05-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.kalisec.org/tags/index.html</loc>
-    
-    <lastmod>2023-05-29</lastmod>
+    <lastmod>2023-09-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -49,7 +22,25 @@
   <url>
     <loc>https://www.kalisec.org/about/index.html</loc>
     
-    <lastmod>2023-05-29</lastmod>
+    <lastmod>2023-09-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kalisec.org/posts/490e9480.html</loc>
+    
+    <lastmod>2023-09-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kalisec.org/posts/f255ffad.html</loc>
+    
+    <lastmod>2023-09-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -58,33 +49,12 @@
 
   <url>
     <loc>https://www.kalisec.org/</loc>
-    <lastmod>2023-06-25</lastmod>
+    <lastmod>2023-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
-  <url>
-    <loc>https://www.kalisec.org/tags/docker/</loc>
-    <lastmod>2023-06-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.kalisec.org/tags/vps/</loc>
-    <lastmod>2023-06-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
-  
-  <url>
-    <loc>https://www.kalisec.org/categories/Web/</loc>
-    <lastmod>2023-06-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
 </urlset>

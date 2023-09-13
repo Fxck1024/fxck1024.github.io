@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>MrLee&#39;s Blog</title>
+  
+  
+  <link href="https://www.kalisec.org/atom.xml" rel="self"/>
+  
+  <link href="https://www.kalisec.org/"/>
+  <updated>2023-09-13T06:40:59.245Z</updated>
+  <id>https://www.kalisec.org/</id>
+  
+  <author>
+    <name>MrLee</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vps</title>
+    <link href="https://www.kalisec.org/posts/490e9480.html"/>
+    <id>https://www.kalisec.org/posts/490e9480.html</id>
+    <published>2023-05-29T03:39:53.000Z</published>
+    <updated>2023-09-13T06:40:59.245Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="修改ssh端口"><a href="#修改ssh端口" class="headerlink" title="修改ssh端口"></a>修改ssh端口</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">&quot;s/#Port 22/Port 38752/g&quot;</span> /etc/ssh/sshd_config</span><br><span class="line"><span class="comment">#或者使用脚本</span></span><br><span class="line">wget https://www.moerats.com/usr/down/sshport.sh</span><br><span class="line">bash sshport.sh</span><br><span class="line">service ssh restart</span><br></pre></td></tr></table></figure><h4 id="添加Swap虚拟内存"><a href="#添加Swap虚拟内存" class="headerlink" title="添加Swap虚拟内存"></a>添加Swap虚拟内存</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://www.moerats.com/usr/shell/swap.sh &amp;&amp; bash swap.sh</span><br></pre></td></tr></table></figure><h4 id="防ssh爆破"><a href="#防ssh爆破" class="headerlink" title="防ssh爆破"></a>防ssh爆破</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install iptables fail2ban -y</span><br><span class="line">vim /etc/fail2ban/jail.d/jail.local</span><br><span class="line">service fail2ban restart</span><br><span class="line">service fail2ban status</span><br><span class="line"></span><br><span class="line"><span class="comment">#jail.local</span></span><br><span class="line">[sshd]</span><br><span class="line">port = 38752</span><br><span class="line">maxretry = 3</span><br><span class="line">bantime = 6d</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;修改ssh端口&quot;&gt;&lt;a href=&quot;#修改ssh端口&quot; class=&quot;headerlink&quot; title=&quot;修改ssh端口&quot;&gt;&lt;/a&gt;修改ssh端口&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>docker</title>
+    <link href="https://www.kalisec.org/posts/f255ffad.html"/>
+    <id>https://www.kalisec.org/posts/f255ffad.html</id>
+    <published>2023-05-29T03:38:17.000Z</published>
+    <updated>2023-09-13T06:40:59.245Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#install</span></span><br><span class="line">curl -sSL https://get.docker.com/ | sh</span><br><span class="line">systemctl start docker</span><br><span class="line">systemctl <span class="built_in">enable</span> docker</span><br><span class="line"><span class="comment">#remove</span></span><br><span class="line">docker stop $(docker ps -a -q)</span><br><span class="line">docker <span class="built_in">rm</span> $(docker ps -a -q)</span><br><span class="line">docker rmi $(docker images -q)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#install&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span cla</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
