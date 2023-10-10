@@ -97,15 +97,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="a hacker.">
+    <meta name="description" content="No excuse">
 <meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="https://kalisec.org/about/index.html">
+<meta property="og:title" content="search">
+<meta property="og:url" content="https://kalisec.org/search/index.html">
 <meta property="og:site_name" content="MrLee&#39;s Blog">
-<meta property="og:description" content="a hacker.">
+<meta property="og:description" content="No excuse">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-09-13T06:41:37.000Z">
-<meta property="article:modified_time" content="2023-09-13T06:43:35.733Z">
+<meta property="article:published_time" content="2023-10-10T11:35:32.704Z">
+<meta property="article:modified_time" content="2023-10-10T11:35:31.691Z">
 <meta property="article:author" content="MrLee">
 <meta name="twitter:card" content="summary">
     
@@ -127,7 +127,7 @@
       
     
     <!-- title -->
-    <title>about</title>
+    <title>search</title>
     <!-- async scripts -->
     <!-- Google Analytics -->
 
@@ -197,9 +197,15 @@
 
   <div class="content" itemprop="articleBody">
       
-          <p>a hacker.</p>
+        <section id="search">
+  <form>
+    <input type="text" class="search-input" id="search-input" placeholder="Search...">
+  </form>
+  <div id="search-result"></div>
+  <p class="search-no-result">No results found.</p>
+</section>
 
-        
+      
   </div>
 </article>
 
@@ -254,6 +260,45 @@
 <script src="/js/main.js"></script>
 
 <!-- search -->
+
+  
+<script src="/js/search.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+
+    var $inputArea = $("input#search-input");
+    var $resultArea = document.querySelector("div#search-result");
+
+    $inputArea.focus(function() {
+      var search_path = "search.xml";
+      if (search_path.length == 0) {
+        search_path = "search.xml";
+      }
+      var path = "/" + search_path;
+      searchFunc(path, 'search-input', 'search-result');
+    });
+
+    $inputArea.keydown(function(e) {
+      if (e.which == 13) {
+        e.preventDefault();
+      }
+    });
+
+    var observer = new MutationObserver(function(mutationsList, observer) {
+      if (mutationsList.length == 1) {
+        if (mutationsList[0].addedNodes.length) {
+          $(".search-no-result").hide();
+        } else if (mutationsList[0].removedNodes.length) {
+          $(".search-no-result").show(200);
+        }
+      }
+    });
+
+    observer.observe($resultArea, { childList: true });
+
+  });
+  </script>
 
 <!-- Baidu Analytics -->
 

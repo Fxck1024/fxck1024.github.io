@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>docker</title>
-    <url>/posts/f255ffad.html</url>
-    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#install</span></span><br><span class="line">curl -sSL https://get.docker.com/ | sh</span><br><span class="line">systemctl start docker</span><br><span class="line">systemctl <span class="built_in">enable</span> docker</span><br><span class="line"><span class="comment">#remove</span></span><br><span class="line">docker stop $(docker ps -a -q)</span><br><span class="line">docker <span class="built_in">rm</span> $(docker ps -a -q)</span><br><span class="line">docker rmi $(docker images -q)</span><br></pre></td></tr></table></figure>]]></content>
-  </entry>
-  <entry>
     <title>vps</title>
     <url>/posts/490e9480.html</url>
     <content><![CDATA[<h4 id="修改ssh端口"><a href="#修改ssh端口" class="headerlink" title="修改ssh端口"></a>修改ssh端口</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">&quot;s/#Port 22/Port 38752/g&quot;</span> /etc/ssh/sshd_config</span><br><span class="line"><span class="comment">#或者使用脚本</span></span><br><span class="line">wget https://www.moerats.com/usr/down/sshport.sh</span><br><span class="line">bash sshport.sh</span><br><span class="line">service ssh restart</span><br></pre></td></tr></table></figure>
@@ -13,6 +8,11 @@
 <h4 id="添加Swap虚拟内存"><a href="#添加Swap虚拟内存" class="headerlink" title="添加Swap虚拟内存"></a>添加Swap虚拟内存</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://www.moerats.com/usr/shell/swap.sh &amp;&amp; bash swap.sh</span><br></pre></td></tr></table></figure>
 
 <h4 id="防ssh爆破"><a href="#防ssh爆破" class="headerlink" title="防ssh爆破"></a>防ssh爆破</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install iptables fail2ban -y</span><br><span class="line">vim /etc/fail2ban/jail.d/jail.local</span><br><span class="line">service fail2ban restart</span><br><span class="line">service fail2ban status</span><br><span class="line"></span><br><span class="line"><span class="comment">#jail.local</span></span><br><span class="line">[sshd]</span><br><span class="line">port = 38752</span><br><span class="line">maxretry = 3</span><br><span class="line">bantime = 6d</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>docker</title>
+    <url>/posts/f255ffad.html</url>
+    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#install</span></span><br><span class="line">curl -sSL https://get.docker.com/ | sh</span><br><span class="line">systemctl start docker</span><br><span class="line">systemctl <span class="built_in">enable</span> docker</span><br><span class="line"><span class="comment">#remove</span></span><br><span class="line">docker stop $(docker ps -a -q)</span><br><span class="line">docker <span class="built_in">rm</span> $(docker ps -a -q)</span><br><span class="line">docker rmi $(docker images -q)</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
     <title>movie</title>
@@ -35,6 +35,44 @@
 </div>
 <blockquote>
 <p>女主实在太漂亮了，特效很炫酷，特别是时间放缓，剧情一般。个人点评6.0，值得一看。</p>
+</blockquote>
+<div class="douban-card-block">
+    <a class="douban-card" href="https://movie.douban.com/subject/6771529">
+        <div bg-lazy class="douban-card-bgimg" style="background-image: url('https://images.weserv.nl/?url=https://img9.doubanio.com/view/photo/s_ratio_poster/public/p1505761616.jpg');"></div>
+        <div class="douban-card-left">
+            <div bg-lazy class="douban-card-img" style="background-image: url('https://images.weserv.nl/?url=https://img9.doubanio.com/view/photo/s_ratio_poster/public/p1505761616.jpg');"></div>
+            <div class="douban-card-status">灯影绰约</div>
+        </div>
+        <div class="douban-card-right">
+            <div class="douban-card-item"><span>电影名: </span><strong>突袭TheRaid(2011)</strong></div>
+            <div class="douban-card-item"><span>导演: </span><span>加雷斯·埃文斯</span></div>
+            <div class="douban-card-item"><span>主演: </span><span>伊科·乌艾斯/乔·塔斯利姆</span></div>
+            <div class="douban-card-item"><span>上映时间: </span><span>2011-09-08(多伦多电影节)</span></div>
+            <div class="douban-card-item"><span>评分: </span><span>7.8</span></div>
+        </div>
+    </a>
+</div>
+<blockquote>
+<p>强烈推荐，拳拳到肉，抛开剧情薄弱，打戏是真的畅快淋漓。个人点评8.0，非常爽。</p>
+</blockquote>
+<div class="douban-card-block">
+    <a class="douban-card" href="https://movie.douban.com/subject/25706773">
+        <div bg-lazy class="douban-card-bgimg" style="background-image: url('https://images.weserv.nl/?url=https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2317785167.jpg');"></div>
+        <div class="douban-card-left">
+            <div bg-lazy class="douban-card-img" style="background-image: url('https://images.weserv.nl/?url=https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2317785167.jpg');"></div>
+            <div class="douban-card-status">灯影绰约</div>
+        </div>
+        <div class="douban-card-right">
+            <div class="douban-card-item"><span>电影名: </span><strong>硬核亨利Хардкор(2015)</strong></div>
+            <div class="douban-card-item"><span>导演: </span><span>伊利亚·奈舒勒</span></div>
+            <div class="douban-card-item"><span>主演: </span><span>沙尔托·科普雷/丹尼拉·科兹洛夫斯基</span></div>
+            <div class="douban-card-item"><span>上映时间: </span><span>2015-09-12(多伦多电影节)</span></div>
+            <div class="douban-card-item"><span>评分: </span><span>7.7</span></div>
+        </div>
+    </a>
+</div>
+<blockquote>
+<p>第一人称视角，代入跑酷大师，个人点评7.0，值得一看。</p>
 </blockquote>
 <div class="douban-card-block">
     <a class="douban-card" href="https://movie.douban.com/subject/1998751">
