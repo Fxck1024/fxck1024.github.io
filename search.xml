@@ -14,4 +14,69 @@
 
 <h4 id="防ssh爆破"><a href="#防ssh爆破" class="headerlink" title="防ssh爆破"></a>防ssh爆破</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install iptables fail2ban -y</span><br><span class="line">vim /etc/fail2ban/jail.d/jail.local</span><br><span class="line">service fail2ban restart</span><br><span class="line">service fail2ban status</span><br><span class="line"></span><br><span class="line"><span class="comment">#jail.local</span></span><br><span class="line">[sshd]</span><br><span class="line">port = 38752</span><br><span class="line">maxretry = 3</span><br><span class="line">bantime = 6d</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
   </entry>
+  <entry>
+    <title>movie</title>
+    <url>/posts/1d5ef26f.html</url>
+    <content><![CDATA[<div class="douban-card-block">
+    <a class="douban-card" href="https://movie.douban.com/subject/3387483">
+        <div bg-lazy class="douban-card-bgimg" style="background-image: url('https://images.weserv.nl/?url=https://img2.doubanio.com/view/photo/s_ratio_poster/public/p1679624292.jpg');"></div>
+        <div class="douban-card-left">
+            <div bg-lazy class="douban-card-img" style="background-image: url('https://images.weserv.nl/?url=https://img2.doubanio.com/view/photo/s_ratio_poster/public/p1679624292.jpg');"></div>
+            <div class="douban-card-status">灯影绰约</div>
+        </div>
+        <div class="douban-card-right">
+            <div class="douban-card-item"><span>电影名: </span><strong>特警判官Dredd(2012)</strong></div>
+            <div class="douban-card-item"><span>导演: </span><span>皮特·特拉维斯</span></div>
+            <div class="douban-card-item"><span>主演: </span><span>卡尔·厄本/詹森·库伯</span></div>
+            <div class="douban-card-item"><span>上映时间: </span><span>2013-03-01(中国大陆)</span></div>
+            <div class="douban-card-item"><span>评分: </span><span>6.5</span></div>
+        </div>
+    </a>
+</div>
+<blockquote>
+<p>女主实在太漂亮了，特效很炫酷，特别是时间放缓，剧情一般。个人点评6.0，值得一看。</p>
+</blockquote>
+<div class="douban-card-block">
+    <a class="douban-card" href="https://movie.douban.com/subject/1998751">
+        <div bg-lazy class="douban-card-bgimg" style="background-image: url('https://images.weserv.nl/?url=https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2346327467.jpg');"></div>
+        <div class="douban-card-left">
+            <div bg-lazy class="douban-card-img" style="background-image: url('https://images.weserv.nl/?url=https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2346327467.jpg');"></div>
+            <div class="douban-card-status">灯影绰约</div>
+        </div>
+        <div class="douban-card-right">
+            <div class="douban-card-item"><span>电影名: </span><strong>情逢敌手(1985)</strong></div>
+            <div class="douban-card-item"><span>导演: </span><span>袁和平</span></div>
+            <div class="douban-card-item"><span>主演: </span><span>甄子丹/罗美薇</span></div>
+            <div class="douban-card-item"><span>上映时间: </span><span>1985-04-03</span></div>
+            <div class="douban-card-item"><span>评分: </span><span>7.5</span></div>
+        </div>
+    </a>
+</div>
+<blockquote>
+<p>年轻的叶师傅和歌神老婆，轻松搞笑，适合日常无聊看看。个人点评8.0，推荐</p>
+</blockquote>
+<div class="douban-card-block">
+    <a class="douban-card" href="https://movie.douban.com/subject/1307704">
+        <div bg-lazy class="douban-card-bgimg" style="background-image: url('https://images.weserv.nl/?url=https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2554468884.jpg');"></div>
+        <div class="douban-card-left">
+            <div bg-lazy class="douban-card-img" style="background-image: url('https://images.weserv.nl/?url=https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2554468884.jpg');"></div>
+            <div class="douban-card-status">灯影绰约</div>
+        </div>
+        <div class="douban-card-right">
+            <div class="douban-card-item"><span>电影名: </span><strong>至尊计状元才至尊計狀元才(1990)</strong></div>
+            <div class="douban-card-item"><span>导演: </span><span>黄泰来/向华胜</span></div>
+            <div class="douban-card-item"><span>主演: </span><span>谭咏麟/刘德华</span></div>
+            <div class="douban-card-item"><span>上映时间: </span><span>1990-04-05(中国香港)</span></div>
+            <div class="douban-card-item"><span>评分: </span><span>6.6</span></div>
+        </div>
+    </a>
+</div>
+<blockquote>
+<p>罗美薇和李嘉欣，剧情老套，个人点评6.0，值得一看</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
 </search>
