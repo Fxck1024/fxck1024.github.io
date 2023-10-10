@@ -6,15 +6,6 @@
     <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#install</span></span><br><span class="line">curl -sSL https://get.docker.com/ | sh</span><br><span class="line">systemctl start docker</span><br><span class="line">systemctl <span class="built_in">enable</span> docker</span><br><span class="line"><span class="comment">#remove</span></span><br><span class="line">docker stop $(docker ps -a -q)</span><br><span class="line">docker <span class="built_in">rm</span> $(docker ps -a -q)</span><br><span class="line">docker rmi $(docker images -q)</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
-    <title>vps</title>
-    <url>/490e9480.html</url>
-    <content><![CDATA[<h4 id="修改ssh端口"><a href="#修改ssh端口" class="headerlink" title="修改ssh端口"></a>修改ssh端口</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">&quot;s/#Port 22/Port 38752/g&quot;</span> /etc/ssh/sshd_config</span><br><span class="line"><span class="comment">#或者使用脚本</span></span><br><span class="line">wget https://www.moerats.com/usr/down/sshport.sh</span><br><span class="line">bash sshport.sh</span><br><span class="line">service ssh restart</span><br></pre></td></tr></table></figure>
-
-<h4 id="添加Swap虚拟内存"><a href="#添加Swap虚拟内存" class="headerlink" title="添加Swap虚拟内存"></a>添加Swap虚拟内存</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://www.moerats.com/usr/shell/swap.sh &amp;&amp; bash swap.sh</span><br></pre></td></tr></table></figure>
-
-<h4 id="防ssh爆破"><a href="#防ssh爆破" class="headerlink" title="防ssh爆破"></a>防ssh爆破</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install iptables fail2ban -y</span><br><span class="line">vim /etc/fail2ban/jail.d/jail.local</span><br><span class="line">service fail2ban restart</span><br><span class="line">service fail2ban status</span><br><span class="line"></span><br><span class="line"><span class="comment">#jail.local</span></span><br><span class="line">[sshd]</span><br><span class="line">port = 38752</span><br><span class="line">maxretry = 3</span><br><span class="line">bantime = 6d</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-  </entry>
-  <entry>
     <title>movie</title>
     <url>/1d5ef26f.html</url>
     <content><![CDATA[<div class="douban-card-block">
@@ -116,5 +107,14 @@
       <tags>
         <tag>日常</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>vps</title>
+    <url>/490e9480.html</url>
+    <content><![CDATA[<h4 id="修改ssh端口"><a href="#修改ssh端口" class="headerlink" title="修改ssh端口"></a>修改ssh端口</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">&quot;s/#Port 22/Port 38752/g&quot;</span> /etc/ssh/sshd_config</span><br><span class="line"><span class="comment">#或者使用脚本</span></span><br><span class="line">wget https://www.moerats.com/usr/down/sshport.sh</span><br><span class="line">bash sshport.sh</span><br><span class="line">service ssh restart</span><br></pre></td></tr></table></figure>
+
+<h4 id="添加Swap虚拟内存"><a href="#添加Swap虚拟内存" class="headerlink" title="添加Swap虚拟内存"></a>添加Swap虚拟内存</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://www.moerats.com/usr/shell/swap.sh &amp;&amp; bash swap.sh</span><br></pre></td></tr></table></figure>
+
+<h4 id="防ssh爆破"><a href="#防ssh爆破" class="headerlink" title="防ssh爆破"></a>防ssh爆破</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install iptables fail2ban -y</span><br><span class="line">vim /etc/fail2ban/jail.d/jail.local</span><br><span class="line">service fail2ban restart</span><br><span class="line">service fail2ban status</span><br><span class="line"></span><br><span class="line"><span class="comment">#jail.local</span></span><br><span class="line">[sshd]</span><br><span class="line">port = 38752</span><br><span class="line">maxretry = 3</span><br><span class="line">bantime = 6d</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
   </entry>
 </search>
