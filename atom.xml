@@ -6,7 +6,7 @@
   <link href="https://kalisec.org/atom.xml" rel="self"/>
   
   <link href="https://kalisec.org/"/>
-  <updated>2023-12-14T02:16:49.161Z</updated>
+  <updated>2023-12-14T02:17:10.933Z</updated>
   <id>https://kalisec.org/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://kalisec.org/posts/8544442c.html"/>
     <id>https://kalisec.org/posts/8544442c.html</id>
     <published>2023-12-14T02:15:32.000Z</published>
-    <updated>2023-12-14T02:16:49.161Z</updated>
+    <updated>2023-12-14T02:17:10.933Z</updated>
     
     <content type="html"><![CDATA[<p>之前收了个server-factory的v6小鸡，记录一下折腾历史。<br>首先让小鸡支持访问ipv4的网站，</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mv /etc/resolv.conf /etc/resolv.conf.bak &amp;&amp; echo -e &quot;nameserver 2001:67c:2b0::4\nnameserver 2001:67c:2b0::6&quot; &gt; /etc/resolv.conf</span><br></pre></td></tr></table></figure><p>然后就安装warp添加ipv4</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget -N https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh &amp;&amp; bash menu.sh 4 Lisence 设备名</span><br><span class="line">#参考https://gitlab.com/fscarmen/warp/-/blob/main/README.md#warp-%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC</span><br></pre></td></tr></table></figure>]]></content>
     
