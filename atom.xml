@@ -3,11 +3,11 @@
   <title>MrLee&#39;s Blog</title>
   
   
-  <link href="https://kalisec.org/atom.xml" rel="self"/>
+  <link href="https://heyimg.com/atom.xml" rel="self"/>
   
-  <link href="https://kalisec.org/"/>
+  <link href="https://heyimg.com/"/>
   <updated>2023-12-14T02:17:10.933Z</updated>
-  <id>https://kalisec.org/</id>
+  <id>https://heyimg.com/</id>
   
   <author>
     <name>MrLee</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>ipv6</title>
-    <link href="https://kalisec.org/posts/8544442c.html"/>
-    <id>https://kalisec.org/posts/8544442c.html</id>
+    <link href="https://heyimg.com/posts/8544442c.html"/>
+    <id>https://heyimg.com/posts/8544442c.html</id>
     <published>2023-12-14T02:15:32.000Z</published>
     <updated>2023-12-14T02:17:10.933Z</updated>
     
@@ -39,8 +39,8 @@
   
   <entry>
     <title>movie</title>
-    <link href="https://kalisec.org/posts/1d5ef26f.html"/>
-    <id>https://kalisec.org/posts/1d5ef26f.html</id>
+    <link href="https://heyimg.com/posts/1d5ef26f.html"/>
+    <id>https://heyimg.com/posts/1d5ef26f.html</id>
     <published>2023-10-10T09:50:41.000Z</published>
     <updated>2023-10-14T04:42:20.099Z</updated>
     
@@ -57,14 +57,14 @@
     
     
     
-    <category term="日常" scheme="https://kalisec.org/tags/%E6%97%A5%E5%B8%B8/"/>
+    <category term="日常" scheme="https://heyimg.com/tags/%E6%97%A5%E5%B8%B8/"/>
     
   </entry>
   
   <entry>
     <title>vps</title>
-    <link href="https://kalisec.org/posts/490e9480.html"/>
-    <id>https://kalisec.org/posts/490e9480.html</id>
+    <link href="https://heyimg.com/posts/490e9480.html"/>
+    <id>https://heyimg.com/posts/490e9480.html</id>
     <published>2023-05-29T03:39:53.000Z</published>
     <updated>2023-09-13T06:40:59.245Z</updated>
     
@@ -83,8 +83,8 @@
   
   <entry>
     <title>docker</title>
-    <link href="https://kalisec.org/posts/f255ffad.html"/>
-    <id>https://kalisec.org/posts/f255ffad.html</id>
+    <link href="https://heyimg.com/posts/f255ffad.html"/>
+    <id>https://heyimg.com/posts/f255ffad.html</id>
     <published>2023-05-29T03:38:17.000Z</published>
     <updated>2023-09-13T06:40:59.245Z</updated>
     
