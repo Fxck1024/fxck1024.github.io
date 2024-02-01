@@ -2,18 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://uuul.net/posts/8544442c.html</loc>
+    <loc>https://uuul.net/posts/490e9480.html</loc>
     
-    <lastmod>2023-12-14</lastmod>
+    <lastmod>2024-02-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://uuul.net/posts/1d5ef26f.html</loc>
+    <loc>https://uuul.net/posts/8544442c.html</loc>
     
-    <lastmod>2023-10-14</lastmod>
+    <lastmod>2024-02-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://uuul.net/posts/f255ffad.html</loc>
+    
+    <lastmod>2024-02-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://uuul.net/posts/c16c6dcf.html</loc>
+    
+    <lastmod>2024-02-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -55,24 +73,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://uuul.net/posts/490e9480.html</loc>
-    
-    <lastmod>2023-09-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://uuul.net/posts/f255ffad.html</loc>
-    
-    <lastmod>2023-09-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://uuul.net/</loc>
@@ -81,13 +81,6 @@
     <priority>1.0</priority>
   </url>
 
-  
-  <url>
-    <loc>https://uuul.net/tags/%E6%97%A5%E5%B8%B8/</loc>
-    <lastmod>2024-02-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
 
   
