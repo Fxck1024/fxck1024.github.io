@@ -6,7 +6,7 @@
   <link href="https://uuul.net/atom.xml" rel="self"/>
   
   <link href="https://uuul.net/"/>
-  <updated>2024-02-03T06:08:00.877Z</updated>
+  <updated>2024-02-14T05:11:30.190Z</updated>
   <id>https://uuul.net/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>alist</title>
+    <link href="https://uuul.net/posts/7fc8ee4.html"/>
+    <id>https://uuul.net/posts/7fc8ee4.html</id>
+    <published>2024-02-14T03:57:05.000Z</published>
+    <updated>2024-02-14T05:11:30.190Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="alist一键搭建教程"><a href="#alist一键搭建教程" class="headerlink" title="alist一键搭建教程"></a>alist一键搭建教程</h4><h5 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#首先安装nginx方便反向代理</span><br><span class="line">apt install nginx</span><br></pre></td></tr></table></figure><h5 id="申请证书"><a href="#申请证书" class="headerlink" title="申请证书"></a>申请证书</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl https://get.acme.sh | sh -s email=my@example.com</span><br><span class="line">bash ~/.acme.sh/acme.sh --issue -d &quot;域名&quot; --standalone -k ec-256</span><br><span class="line">bash ~/.acme.sh/acme.sh --install-cert -d &quot;域名&quot; --key-file /root/private.key --fullchain-file /root/cert.crt --ecc</span><br></pre></td></tr></table></figure><h5 id="编写nginx配置文件"><a href="#编写nginx配置文件" class="headerlink" title="编写nginx配置文件"></a>编写nginx配置文件</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#vim /etc/nginx/conf.d/test.conf</span><br><span class="line">server &#123;</span><br><span class="line">    listen 443 ssl default_server;</span><br><span class="line">    listen [::]:443 ssl default_server;</span><br><span class="line">    ssl_reject_handshake on;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen 443 ssl;</span><br><span class="line">    listen [::]:443 ssl;</span><br><span class="line">    server_name example.com;  #域名</span><br><span class="line">    ssl_certificate example.com.crt; #证书</span><br><span class="line">    ssl_certificate_key example.com.key;#证书密钥</span><br><span class="line">&#125;</span><br><span class="line">location / &#123;</span><br><span class="line">  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">  proxy_set_header X-Forwarded-Proto $scheme;</span><br><span class="line">  proxy_set_header Host $http_host;</span><br><span class="line">  proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">  proxy_set_header Range $http_range;</span><br><span class="line">proxy_set_header If-Range $http_if_range;</span><br><span class="line">  proxy_redirect off;</span><br><span class="line">  proxy_pass http://127.0.0.1:5244;</span><br><span class="line">  # the max size of file to upload</span><br><span class="line">  client_max_body_size 20000m;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h5 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl -sSL https://get.docker.com/ | sh</span><br><span class="line">systemctl start docker</span><br><span class="line">systemctl enable docker</span><br></pre></td></tr></table></figure><h5 id="安装alist"><a href="#安装alist" class="headerlink" title="安装alist"></a>安装alist</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -d --restart=always -v /etc/alist:/opt/alist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name=&quot;alist&quot; xhofe/alist-aria2:latest</span><br></pre></td></tr></table></figure><h5 id="添加一起看功能"><a href="#添加一起看功能" class="headerlink" title="添加一起看功能"></a>添加一起看功能</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#alist后台&gt;全局设置</span><br><span class="line">&lt;script src=&quot;https://2gether.video/release/extension.website.user.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; &#123;</span><br><span class="line">  const seAList = document.createElement(&quot;style&quot;);</span><br><span class="line"></span><br><span class="line">  seAList.innerHTML = `</span><br><span class="line">    .left-toolbar-box &#123;</span><br><span class="line">        left: var(--hope-space-5);</span><br><span class="line">        right: auto;</span><br><span class="line">    &#125;</span><br><span class="line">`;</span><br><span class="line"></span><br><span class="line">  document.body.appendChild(seAList);</span><br><span class="line">&#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;alist一键搭建教程&quot;&gt;&lt;a href=&quot;#alist一键搭建教程&quot; class=&quot;headerlink&quot; title=&quot;alist一键搭建教程&quot;&gt;&lt;/a&gt;alist一键搭建教程&lt;/h4&gt;&lt;h5 id=&quot;安装nginx&quot;&gt;&lt;a href=&quot;#安装nginx&quot; c</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>cobaltstrike免杀记录</title>
