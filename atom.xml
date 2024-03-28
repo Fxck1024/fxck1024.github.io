@@ -3,11 +3,11 @@
   <title>MrLee&#39;s Blog</title>
   
   
-  <link href="https://uuul.net/atom.xml" rel="self"/>
+  <link href="https://arksec.net/atom.xml" rel="self"/>
   
-  <link href="https://uuul.net/"/>
+  <link href="https://arksec.net/"/>
   <updated>2024-02-14T05:12:00.049Z</updated>
-  <id>https://uuul.net/</id>
+  <id>https://arksec.net/</id>
   
   <author>
     <name>MrLee</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>alist</title>
-    <link href="https://uuul.net/posts/7fc8ee4.html"/>
-    <id>https://uuul.net/posts/7fc8ee4.html</id>
+    <link href="https://arksec.net/posts/7fc8ee4.html"/>
+    <id>https://arksec.net/posts/7fc8ee4.html</id>
     <published>2024-02-14T03:57:05.000Z</published>
     <updated>2024-02-14T05:12:00.049Z</updated>
     
@@ -38,10 +38,10 @@
   
   <entry>
     <title>cobaltstrike免杀记录</title>
-    <link href="https://uuul.net/posts/c16c6dcf.html"/>
-    <id>https://uuul.net/posts/c16c6dcf.html</id>
+    <link href="https://arksec.net/posts/c16c6dcf.html"/>
+    <id>https://arksec.net/posts/c16c6dcf.html</id>
     <published>2024-02-01T06:12:19.000Z</published>
-    <updated>2024-02-03T06:08:00.877Z</updated>
+    <updated>2024-03-28T04:17:30.981Z</updated>
     
     <content type="html"><![CDATA[<p>待更新。。。</p>]]></content>
     
@@ -59,10 +59,10 @@
   
   <entry>
     <title>ipv6</title>
-    <link href="https://uuul.net/posts/8544442c.html"/>
-    <id>https://uuul.net/posts/8544442c.html</id>
+    <link href="https://arksec.net/posts/8544442c.html"/>
+    <id>https://arksec.net/posts/8544442c.html</id>
     <published>2023-12-14T02:15:32.000Z</published>
-    <updated>2024-02-03T06:08:59.567Z</updated>
+    <updated>2024-03-28T04:18:18.365Z</updated>
     
     <content type="html"><![CDATA[<p>之前收了个server-factory的v6小鸡，记录一下折腾历史。<br>首先让小鸡支持访问ipv4的网站，</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mv /etc/resolv.conf /etc/resolv.conf.bak &amp;&amp; echo -e &quot;nameserver 2001:67c:2b0::4\nnameserver 2001:67c:2b0::6&quot; &gt; /etc/resolv.conf</span><br></pre></td></tr></table></figure><p>然后就安装warp添加ipv4</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget -N https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh &amp;&amp; bash menu.sh 4 Lisence 设备名</span><br><span class="line">#参考https://gitlab.com/fscarmen/warp/-/blob/main/README.md#warp-%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -80,10 +80,10 @@
   
   <entry>
     <title>vps</title>
-    <link href="https://uuul.net/posts/490e9480.html"/>
-    <id>https://uuul.net/posts/490e9480.html</id>
+    <link href="https://arksec.net/posts/490e9480.html"/>
+    <id>https://arksec.net/posts/490e9480.html</id>
     <published>2023-05-29T03:39:53.000Z</published>
-    <updated>2024-02-03T06:09:44.533Z</updated>
+    <updated>2024-03-28T04:18:32.185Z</updated>
     
     <content type="html"><![CDATA[<h4 id="修改ssh端口"><a href="#修改ssh端口" class="headerlink" title="修改ssh端口"></a>修改ssh端口</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">&quot;s/#Port 22/Port 38752/g&quot;</span> /etc/ssh/sshd_config</span><br><span class="line"><span class="comment">#或者使用脚本</span></span><br><span class="line">wget https://www.moerats.com/usr/down/sshport.sh</span><br><span class="line">bash sshport.sh</span><br><span class="line">service ssh restart</span><br></pre></td></tr></table></figure><h4 id="添加Swap虚拟内存"><a href="#添加Swap虚拟内存" class="headerlink" title="添加Swap虚拟内存"></a>添加Swap虚拟内存</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://www.moerats.com/usr/shell/swap.sh &amp;&amp; bash swap.sh</span><br></pre></td></tr></table></figure><h4 id="防ssh爆破"><a href="#防ssh爆破" class="headerlink" title="防ssh爆破"></a>防ssh爆破</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install iptables fail2ban -y</span><br><span class="line">vim /etc/fail2ban/jail.d/jail.local</span><br><span class="line">service fail2ban restart</span><br><span class="line">service fail2ban status</span><br><span class="line"></span><br><span class="line"><span class="comment">#jail.local</span></span><br><span class="line">[sshd]</span><br><span class="line">port = 38752</span><br><span class="line">maxretry = 3</span><br><span class="line">bantime = 6d</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
     
@@ -100,10 +100,10 @@
   
   <entry>
     <title>docker</title>
-    <link href="https://uuul.net/posts/f255ffad.html"/>
-    <id>https://uuul.net/posts/f255ffad.html</id>
+    <link href="https://arksec.net/posts/f255ffad.html"/>
+    <id>https://arksec.net/posts/f255ffad.html</id>
     <published>2023-05-29T03:38:17.000Z</published>
-    <updated>2024-02-03T06:08:35.402Z</updated>
+    <updated>2024-03-28T04:17:55.702Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#install</span></span><br><span class="line">curl -sSL https://get.docker.com/ | sh</span><br><span class="line">systemctl start docker</span><br><span class="line">systemctl <span class="built_in">enable</span> docker</span><br><span class="line"><span class="comment">#remove</span></span><br><span class="line">docker stop $(docker ps -a -q)</span><br><span class="line">docker <span class="built_in">rm</span> $(docker ps -a -q)</span><br><span class="line">docker rmi $(docker images -q)</span><br></pre></td></tr></table></figure>]]></content>
     
