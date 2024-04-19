@@ -73,19 +73,10 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://arksec.net/about/index.html</loc>
-    
-    <lastmod>2023-09-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://arksec.net/</loc>
-    <lastmod>2024-04-01</lastmod>
+    <lastmod>2024-04-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
