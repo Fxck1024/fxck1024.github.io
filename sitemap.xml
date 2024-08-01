@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://arksec.net/posts/f4d746ea.html</loc>
+    
+    <lastmod>2024-08-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://arksec.net/posts/490e9480.html</loc>
     
     <lastmod>2024-03-28</lastmod>
@@ -76,11 +85,18 @@
 
   <url>
     <loc>https://arksec.net/</loc>
-    <lastmod>2024-07-13</lastmod>
+    <lastmod>2024-08-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>https://arksec.net/tags/docker/</loc>
+    <lastmod>2024-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 
   
