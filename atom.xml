@@ -129,17 +129,14 @@ mkdir c</summary>
     <link href="https://arksec.net/posts/f255ffad.html"/>
     <id>https://arksec.net/posts/f255ffad.html</id>
     <published>2023-05-29T03:38:17.000Z</published>
-    <updated>2024-08-16T05:56:19.799Z</updated>
+    <updated>2024-08-16T22:27:59.047Z</updated>
     
-    <content type="html"><![CDATA[<pre><code class="hljs bash"><span class="hljs-comment">#install</span>curl -sSL https://get.docker.com/ | shsystemctl start dockersystemctl <span class="hljs-built_in">enable</span> docker<span class="hljs-comment">#remove</span>docker stop $(docker ps -a -q)docker <span class="hljs-built_in">rm</span> $(docker ps -a -q)docker rmi $(docker images -q)apt purge docker docker-engine docker.io containerd runc  docker-ce-cli docker-ce</code></pre>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#install</span></span><br><span class="line">curl -sSL https://get.docker.com/ | sh</span><br><span class="line">systemctl start docker</span><br><span class="line">systemctl <span class="built_in">enable</span> docker</span><br><span class="line"><span class="comment">#remove</span></span><br><span class="line">docker stop $(docker ps -a -q)</span><br><span class="line">docker <span class="built_in">rm</span> $(docker ps -a -q)</span><br><span class="line">docker rmi $(docker images -q)</span><br><span class="line"></span><br><span class="line">apt purge docker docker-engine docker.io containerd runc  docker-ce-cli docker-ce</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
-    <summary type="html">&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;&lt;span class=&quot;hljs-comment&quot;&gt;#install&lt;/span&gt;
-curl -sSL https://get.docker.com/ | sh
-systemctl start docker
-system</summary>
+    <summary type="html">&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#install&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span cla</summary>
       
     
     
