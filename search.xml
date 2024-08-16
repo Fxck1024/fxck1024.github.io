@@ -44,6 +44,12 @@
       
       
       
+        <tags>
+            
+            <tag> cs,免杀,Web安全 </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -79,7 +85,7 @@
       <link href="/posts/f255ffad.html"/>
       <url>/posts/f255ffad.html</url>
       
-        <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#install</span></span><br><span class="line">curl -sSL https://get.docker.com/ | sh</span><br><span class="line">systemctl start docker</span><br><span class="line">systemctl <span class="built_in">enable</span> docker</span><br><span class="line"><span class="comment">#remove</span></span><br><span class="line">docker stop $(docker ps -a -q)</span><br><span class="line">docker <span class="built_in">rm</span> $(docker ps -a -q)</span><br><span class="line">docker rmi $(docker images -q)</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#install</span></span><br><span class="line">curl -sSL https://get.docker.com/ | sh</span><br><span class="line">systemctl start docker</span><br><span class="line">systemctl <span class="built_in">enable</span> docker</span><br><span class="line"><span class="comment">#remove</span></span><br><span class="line">docker stop $(docker ps -a -q)</span><br><span class="line">docker <span class="built_in">rm</span> $(docker ps -a -q)</span><br><span class="line">docker rmi $(docker images -q)</span><br><span class="line"></span><br><span class="line">apt purge docker docker-engine docker.io containerd runc  docker-ce-cli docker-ce</span><br></pre></td></tr></table></figure>]]></content>
       
       
       
