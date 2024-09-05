@@ -1,21 +1,16 @@
 <?xml version="1.0"?>
-<rss version="2.0">
-    <channel>
-        <title>MrLee&#39;s Blog</title>
-        <link>https://arksec.net</link>
-        <description>Web安全</description>
-        <language>zh-CN,en,zh-TW,default</language>
-        <pubDate>Thu, 01 Aug 2024 20:00:05 +0800</pubDate>
-        <lastBuildDate>Thu, 01 Aug 2024 20:00:05 +0800</lastBuildDate>
-        <category>docker</category>
-        <category>cs,免杀,Web安全</category>
-        <item>
-            <guid isPermalink="true">https://arksec.net/posts/f4d746ea.html</guid>
-            <title>docker搭建苹果cms</title>
-            <link>https://arksec.net/posts/f4d746ea.html</link>
-            <category>docker</category>
-            <pubDate>Thu, 01 Aug 2024 20:00:05 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;首先安装 docker，参考&lt;a href=&#34;https://arksec.net/posts/f255ffad.html&#34;&gt;这里&lt;/a&gt;&lt;br&gt;
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://arksec.net</id>
+    <title>MrLee&#39;s Blog • Posts by &#34;docker&#34; tag</title>
+    <link href="https://arksec.net" />
+    <updated>2024-08-01T12:00:05.000Z</updated>
+    <category term="docker" />
+    <category term="cs,免杀,Web安全" />
+    <entry>
+        <id>https://arksec.net/posts/f4d746ea.html</id>
+        <title>docker搭建苹果cms</title>
+        <link rel="alternate" href="https://arksec.net/posts/f4d746ea.html"/>
+        <content type="html">&lt;p&gt;首先安装 docker，参考&lt;a href=&#34;https://arksec.net/posts/f255ffad.html&#34;&gt;这里&lt;/a&gt;&lt;br&gt;
 然后运行下面的命令&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;log&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; conf&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; cms&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;docker run -d  --restart=always --name nginx -p 80:80 -p 443:443 -v 自定义路径:自定义路径 -v ./conf:/etc/nginx/nginx.conf -v  ./conf/conf.d:/etc/nginx/conf.d -v ./certs:/etc/nginx/certs -v ./cms:/var/www/html -v ./log/nginx:/var/log/nginx --&lt;span class=&#34;built_in&#34;&gt;link&lt;/span&gt; php:php nginx:alpine&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;docker run -d --restart=always --name php -v 自定义路径:自定义路径 -v ./cms:/var/www/html kimoqi/php-fpm-all-ext:7.3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;docker run -d --name mysql --restart=always -v 自定义路径:自定义路径 -p 自定义端口:3306  -e MYSQL_ROOT_PASSWORD=自定义密码 -e MYSQL_USER=自定义用户名  -e MYSQL_DATABASE=自定义数据库名 mysql:5.7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;自行配置证书放到 certs&lt;/p&gt;
@@ -49,65 +44,8 @@
  点击采集内容&lt;/p&gt;
 &lt;p&gt;最后大功告成&lt;br&gt;
 记得屏蔽进行 IP 限制&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://arksec.net/posts/7fc8ee4.html</guid>
-            <title>alist</title>
-            <link>https://arksec.net/posts/7fc8ee4.html</link>
-            <pubDate>Wed, 14 Feb 2024 11:57:05 +0800</pubDate>
-            <description><![CDATA[ &lt;h4 id=&#34;alist一键搭建教程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#alist一键搭建教程&#34;&gt;#&lt;/a&gt; alist 一键搭建教程&lt;/h4&gt;
-&lt;h5 id=&#34;安装nginx&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装nginx&#34;&gt;#&lt;/a&gt; 安装 nginx&lt;/h5&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#首先安装nginx方便反向代理&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;apt install nginx&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h5 id=&#34;申请证书&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#申请证书&#34;&gt;#&lt;/a&gt; 申请证书&lt;/h5&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;curl https://get.acme.sh | sh -s email=my@example.com&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;bash ~/.acme.sh/acme.sh --issue -d &lt;span class=&#34;string&#34;&gt;&amp;quot;域名&amp;quot;&lt;/span&gt; --standalone -k ec-256&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;bash ~/.acme.sh/acme.sh --install-cert -d &lt;span class=&#34;string&#34;&gt;&amp;quot;域名&amp;quot;&lt;/span&gt; --key-file /root/private.key --fullchain-file /root/cert.crt --ecc&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h5 id=&#34;编写nginx配置文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#编写nginx配置文件&#34;&gt;#&lt;/a&gt; 编写 nginx 配置文件&lt;/h5&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#vim /etc/nginx/conf.d/test.conf&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;server &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    listen 443 ssl default_server;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    listen [::]:443 ssl default_server;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    ssl_reject_handshake on;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;server &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    listen 443 ssl;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    listen [::]:443 ssl;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    server_name example.com;  &lt;span class=&#34;comment&#34;&gt;#域名&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    ssl_certificate example.com.crt; &lt;span class=&#34;comment&#34;&gt;#证书&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    ssl_certificate_key example.com.key;#证书密钥&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;location / &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  proxy_set_header X-Forwarded-For &lt;span class=&#34;variable&#34;&gt;$proxy_add_x_forwarded_for&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  proxy_set_header X-Forwarded-Proto &lt;span class=&#34;variable&#34;&gt;$scheme&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  proxy_set_header Host &lt;span class=&#34;variable&#34;&gt;$http_host&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  proxy_set_header X-Real-IP &lt;span class=&#34;variable&#34;&gt;$remote_addr&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  proxy_set_header Range &lt;span class=&#34;variable&#34;&gt;$http_range&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	proxy_set_header If-Range &lt;span class=&#34;variable&#34;&gt;$http_if_range&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  proxy_redirect off;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  proxy_pass http://127.0.0.1:5244;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;# the max size of file to upload&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  client_max_body_size 20000m;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h5 id=&#34;安装docker&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装docker&#34;&gt;#&lt;/a&gt; 安装 docker&lt;/h5&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;curl -sSL https://get.docker.com/ | sh&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl start docker&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl &lt;span class=&#34;built_in&#34;&gt;enable&lt;/span&gt; docker&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h5 id=&#34;安装alist&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装alist&#34;&gt;#&lt;/a&gt; 安装 alist&lt;/h5&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker run -d --restart=always -v /etc/alist:/opt/alist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name=&lt;span class=&#34;string&#34;&gt;&amp;quot;alist&amp;quot;&lt;/span&gt; xhofe/alist-aria2:latest&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h5 id=&#34;添加一起看功能&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#添加一起看功能&#34;&gt;#&lt;/a&gt; 添加一起看功能&lt;/h5&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#alist后台&amp;gt;全局设置&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;script src=&lt;span class=&#34;string&#34;&gt;&amp;quot;https://2gether.video/release/extension.website.user.js&amp;quot;&lt;/span&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;document.addEventListener(&lt;span class=&#34;string&#34;&gt;&amp;quot;DOMContentLoaded&amp;quot;&lt;/span&gt;, () =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  const seAList = document.createElement(&lt;span class=&#34;string&#34;&gt;&amp;quot;style&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  seAList.innerHTML = `&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    .left-toolbar-box &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        left: var(--hope-space-5);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        right: auto;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;`;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  document.body.appendChild(seAList);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://arksec.net/posts/c16c6dcf.html</guid>
-            <title>cobaltstrike免杀记录</title>
-            <link>https://arksec.net/posts/c16c6dcf.html</link>
-            <category>cs,免杀,Web安全</category>
-            <pubDate>Thu, 01 Feb 2024 14:12:19 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;待更新。。。&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://arksec.net/posts/8544442c.html</guid>
-            <title>ipv6</title>
-            <link>https://arksec.net/posts/8544442c.html</link>
-            <pubDate>Thu, 14 Dec 2023 10:15:32 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;之前收了个 server-factory 的 v6 小鸡，记录一下折腾历史。&lt;br&gt;
-首先让小鸡支持访问 ipv4 的网站，&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mv&lt;/span&gt; /etc/resolv.conf /etc/resolv.conf.bak &amp;amp;&amp;amp; &lt;span class=&#34;built_in&#34;&gt;echo&lt;/span&gt; -e &lt;span class=&#34;string&#34;&gt;&amp;quot;nameserver 2001:67c:2b0::4\nnameserver 2001:67c:2b0::6&amp;quot;&lt;/span&gt; &amp;gt; /etc/resolv.conf&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;然后就安装 warp 添加 ipv4&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wget -N https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh &amp;amp;&amp;amp; bash menu.sh 4 Lisence 设备名&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#参考https://gitlab.com/fscarmen/warp/-/blob/main/README.md#warp-%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://arksec.net/posts/490e9480.html</guid>
-            <title>vps</title>
-            <link>https://arksec.net/posts/490e9480.html</link>
-            <pubDate>Mon, 29 May 2023 11:39:53 +0800</pubDate>
-            <description><![CDATA[ &lt;h4 id=&#34;修改ssh端口&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#修改ssh端口&#34;&gt;#&lt;/a&gt; 修改 ssh 端口&lt;/h4&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sed -i &lt;span class=&#34;string&#34;&gt;&amp;quot;s/#Port 22/Port 38752/g&amp;quot;&lt;/span&gt; /etc/ssh/sshd_config&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#或者使用脚本&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;wget https://www.moerats.com/usr/down/sshport.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;bash sshport.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;service ssh restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&#34;添加swap虚拟内存&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#添加swap虚拟内存&#34;&gt;#&lt;/a&gt; 添加 Swap 虚拟内存&lt;/h4&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wget https://www.moerats.com/usr/shell/swap.sh &amp;amp;&amp;amp; bash swap.sh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&#34;防ssh爆破&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#防ssh爆破&#34;&gt;#&lt;/a&gt; 防 ssh 爆破&lt;/h4&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;apt install iptables fail2ban -y&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vim /etc/fail2ban/jail.d/jail.local&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;service fail2ban restart&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;service fail2ban status&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#jail.local&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[sshd]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;port = 38752&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;maxretry = 3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;bantime = 6d&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://arksec.net/posts/f255ffad.html</guid>
-            <title>docker</title>
-            <link>https://arksec.net/posts/f255ffad.html</link>
-            <pubDate>Mon, 29 May 2023 11:38:17 +0800</pubDate>
-            <description><![CDATA[ &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#install&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;curl -sSL https://get.docker.com/ | sh&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl start docker&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl &lt;span class=&#34;built_in&#34;&gt;enable&lt;/span&gt; docker&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#remove&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;docker stop $(docker ps -a -q)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;docker &lt;span class=&#34;built_in&#34;&gt;rm&lt;/span&gt; $(docker ps -a -q)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;docker rmi $(docker images -q)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;apt purge docker docker-engine docker.io containerd runc  docker-ce-cli docker-ce&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
-        </item>
-    </channel>
-</rss>
+</content>
+        <category term="docker" />
+        <updated>2024-08-01T12:00:05.000Z</updated>
+    </entry>
+</feed>
